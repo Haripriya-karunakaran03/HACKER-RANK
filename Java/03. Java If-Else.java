@@ -57,3 +57,34 @@ public class Solution {
     }
 }
 
+//Second solution
+
+import java.util.*;
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int N = sc.nextInt();
+        
+        String result = "";
+        
+        if(N % 2 != 0){
+            result = "Weird";
+        }
+        
+        else{
+            if(N >= 2 && N <= 5){
+                result = "Not Weird";
+            }
+            else if(N >= 6 && N <= 20){
+                result = "Weird";
+            }
+            else{
+                result = "Not Weird";
+            }
+        }
+        System.out.println(result);
+        sc.close();
+    }
+}
+
