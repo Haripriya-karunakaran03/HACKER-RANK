@@ -70,3 +70,38 @@ print(is_leap(year))
 # If year is divisible by 4 then it is not divisible by 100 means Leap year
 # if year is divisible by 4 then it is also divisible by 100 and also divisible by 400 means Leap year if not by 400 means not a leap year
 # if year is not divisible by 4 means Not a leap year
+
+"""
+Example 1: 2024
+
+Is 2024 divisible by 4?
+2024 ÷ 4 = 506 → Yes!
+Is 2024 divisible by 100?
+2024 ÷ 100 = 20.24 → No!
+Result: Leap year! ✅
+
+Example 2: 1900
+
+Is 1900 divisible by 4?
+1900 ÷ 4 = 475 → Yes!
+Is 1900 divisible by 100?
+1900 ÷ 100 = 19 → Yes!
+Is 1900 divisible by 400?
+1900 ÷ 400 = 4.75 → No!
+Result: Not a leap year! ❌
+
+Example 3: 2000
+
+Is 2000 divisible by 4?
+2000 ÷ 4 = 500 → Yes!
+Is 2000 divisible by 100?
+2000 ÷ 100 = 20 → Yes!
+Is 2000 divisible by 400?
+2000 ÷ 400 = 5 → Yes!
+Result: Leap year! ✅
+
+Example 4: 2023
+Is 2023 divisible by 4?
+2023 ÷ 4 = 505.75 → No!
+Result: Not a leap year! ❌
+"""
