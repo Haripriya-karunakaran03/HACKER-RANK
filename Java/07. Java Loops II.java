@@ -41,3 +41,29 @@ s3=5+1.3+2.3+4.3+8.3=50
 s4=5+1.3+2.3+4.3+8.3+16.3=98
 We then print each element of our series as a single line of space-separated values.
 */
+
+import java.util.*;
+import java.io.*;
+
+class Solution{
+    public static void main(String []argh){
+        Scanner in = new Scanner(System.in);
+        int t=in.nextInt();
+        for(int i=0;i<t;i++){
+            int a = in.nextInt();
+            int b = in.nextInt();
+            int n = in.nextInt();
+            
+            int first_term = a + (int)(Math.pow(2,0) * b);
+            System.out.print(first_term + " ");
+            
+            for(int j = 1; j < n;j++){
+                int Total = first_term + (int)(Math.pow(2,j) * b);
+                System.out.print(Total + " ");
+                first_term = Total;
+            }
+            System.out.println();
+        }
+        in.close();
+    }
+}
