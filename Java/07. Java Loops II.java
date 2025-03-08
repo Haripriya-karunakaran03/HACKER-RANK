@@ -2,7 +2,7 @@
 Link: https://www.hackerrank.com/challenges/java-loops/problem?isFullScreen=true
 
 We use the integers a, b, and n to create the following series:
-(a+20. b), (a+20.b+21.b), (a+20.b+21.b+…….+2n-1.b)
+(a + 20.b), (a + 20.b + 21.b),..., (a + 20.b + 21.b +...+ 2n-1.b)
 
 You are given  queries in the form of a, b, and n. For each query, print the series corresponding to the given a, b, and n values as a single line of n space-separated integers.
 
@@ -63,6 +63,57 @@ class Solution{
                 first_term = Total;
             }
             System.out.println();
+        }
+        in.close();
+    }
+}
+
+// Second way
+import java.util.*;
+import java.io.*;
+
+class Solution{
+    public static void main(String []argh){
+        Scanner in = new Scanner(System.in);
+        int t=in.nextInt();
+        for(int i=0;i<t;i++){
+            int a = in.nextInt();
+            int b = in.nextInt();
+            int n = in.nextInt();
+            
+            int total = a;
+            
+            for(int j = 0;j < n;j++){
+                total = total + (int)(Math.pow(2,j)*b);
+                System.out.print(total + " ");
+            }
+         System.out.println();
+        }
+        in.close();
+    }
+}
+
+//Third way
+import java.util.*;
+import java.io.*;
+
+class Solution{
+    public static void main(String []argh){
+        Scanner in = new Scanner(System.in);
+        int t=in.nextInt();
+        for(int i=0;i<t;i++){
+            int a = in.nextInt();
+            int b = in.nextInt();
+            int n = in.nextInt();
+            
+            int First_Term = a + b; //since the first term which is 2 pow 0 is 1
+            System.out.print(First_Term + " ");
+            
+            for(int j = 1;j < n;j++){
+                First_Term = First_Term + (int)(Math.pow(2,j)*b);
+                System.out.print(First_Term + " ");
+            }
+         System.out.println();
         }
         in.close();
     }
